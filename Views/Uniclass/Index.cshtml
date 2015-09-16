@@ -1,0 +1,52 @@
+﻿@model BIMToolkitAPIClient.ViewModels.ClassificationPage
+
+@{
+    ViewBag.Title = Model.Classification.Title;
+   
+}
+
+<script>
+    var lodLevel = @(ViewBag.LodLevel);
+    var loiLevel = @(ViewBag.LoiLevel);
+</script>
+
+<a href="@ViewBag.Backlink" style="margin-top:10px;display:block">< back</a>
+
+<h2>@Model.Classification.Title</h2>
+
+@if (Model.Classification.Lods != null || Model.Classification.Lois  != null)
+{
+    <div style="float:left">
+        <h3>Level of Detail</h3>
+        @if (Model.Classification.Lods != null)
+        {
+            <div style="margin-bottom:20px;">
+                @Html.DropDownList("lod", new SelectList(Model.Classification.Lods), new { @onchange = "navigate('lod', this.value);" })
+            </div>
+            <h4>Widget rendering</h4>
+    <iframe id="lodFrame" style="width:550px;height:450px;border:1px solid black;" src="https://toolkit.thenbs.com/Definitions/@Model.Classification.Notation/?type=lod&detailLevel=@ViewBag.LodLevel"></iframe>
+        }
+    </div>
+
+    <div style="float:right;padding-left:20px;border-left:1px solid #eee">
+        <h3>Level of Information</h3>
+        @if (Model.Classification.Lois != null)
+        {
+            <div style="margin-bottom:20px;">
+                @Html.DropDownList("loi", new SelectList(Model.Classification.Lois), new { @onchange = "navigate('loi', this.value);" })
+            </div>
+            <h4>Json data</h4>
+            <pre id="loiPre" style="width:550px;height:450px;overflow-y:scroll;margin-bottom:20px;">@Model.Loi</pre>
+            <h4>Widget rendering</h4>
+            <iframe id="loiFrame" style="width:550px;height:450px;border:1px solid black;" src="https://toolkit.thenbs.com/Definitions/@Model.Classification.Notation/?type=loi&detailLevel=@ViewBag.LoiLevel"></iframe>
+        }
+    </div>
+    <div style="clear:both"></div>
+}
+<ul>
+    @foreach (var cn in Model.Classification.Children)
+    {
+        <li>@Html.ActionLink(cn.Notation + " - " + cn.Title, "Index", "Uniclass", new {notation = cn.Notation}, null)</li>
+    }
+</ul>
+
