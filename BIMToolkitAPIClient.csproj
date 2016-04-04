@@ -136,6 +136,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PropertyController.cs" />
     <Compile Include="Controllers\UniclassController.cs" />
     <Compile Include="Dal\ApiAccess.cs" />
     <Compile Include="Global.asax.cs">
@@ -143,9 +144,11 @@
     </Compile>
     <Compile Include="Models\ClassificationNode.cs" />
     <Compile Include="Models\Definition.cs" />
+    <Compile Include="Models\Property.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\ClassificationPage.cs" />
+    <Compile Include="ViewModels\Properties.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -157,6 +160,8 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Uniclass\Index.cshtml" />
+    <Content Include="Views\Property\Index.cshtml" />
+    <Content Include="Views\Property\Property.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
