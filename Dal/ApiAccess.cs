@@ -84,9 +84,12 @@ namespace BIMToolkitAPIClient.Dal
         public static string CallApi(string path)
         {
             string token = GetToken();
+            //get token without helper
             //string token = GetTokenExplained();
             var client = new HttpClient();
             client.SetBearerToken(token);
+            //set header without helper
+            //client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
 
             return client.GetStringAsync(ConfigurationManager.AppSettings["Api"] + "/" + path).Result;
         }
