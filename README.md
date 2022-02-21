@@ -1,5 +1,5 @@
-# BimtoolkitApiClient
-An example ASP.NET MVC website that uses the BIM Toolkit Public API client. Written in C#
+# UniclassApiClient
+An example ASP.NET MVC website that uses the Uniclass Public API client. Written in C#
 
 ## Getting Started
 
