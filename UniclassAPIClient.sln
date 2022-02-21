@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BIMToolkitAPIClient", "BIMToolkitAPIClient.csproj", "{BF5493F3-AF6A-4905-AA5C-2AAE31C33029}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniclassAPIClient", "UniclassAPIClient.csproj", "{BF5493F3-AF6A-4905-AA5C-2AAE31C33029}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{526DB57D-325A-4CEC-9B53-F9A482598DF9}"
 	ProjectSection(SolutionItems) = preProject
@@ -26,5 +26,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {886AE752-3805-4C86-86C5-C7D6736C7EA0}
 	EndGlobalSection
 EndGlobal

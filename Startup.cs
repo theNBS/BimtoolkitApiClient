@@ -1,11 +1,9 @@
-﻿using System;
-using System.Threading.Tasks;
-using Microsoft.Owin;
+﻿using Microsoft.Owin;
 using Owin;
 
-[assembly: OwinStartup(typeof(BIMToolkitAPIClient.Startup))]
+[assembly: OwinStartup(typeof(UniclassAPIClient.Startup))]
 
-namespace BIMToolkitAPIClient
+namespace UniclassAPIClient
 {
     public class Startup
     {

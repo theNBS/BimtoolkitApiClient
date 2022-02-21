@@ -2,18 +2,16 @@
 using System;
 using System.Collections.Generic;
 using System.Configuration;
-using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
-using System.Web;
 using Thinktecture.IdentityModel.Client;
 
-namespace BIMToolkitAPIClient.Dal
+namespace UniclassAPIClient.Dal
 {
 
     /// <summary>
-    /// Demonstration of how to call BIM Toolkit API server side
+    /// Demonstration of how to call the Uniclass API server side
     /// </summary>
     public static class ApiAccess
     {
@@ -84,10 +82,13 @@ namespace BIMToolkitAPIClient.Dal
         public static string CallApi(string path)
         {
             string token = GetToken();
+
             //get token without helper
             //string token = GetTokenExplained();
+
             var client = new HttpClient();
             client.SetBearerToken(token);
+
             //set header without helper
             //client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
 
